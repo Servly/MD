@@ -23,5 +23,5 @@ writepsf 1UBQ_ready.psf
 package require solvate
 solvate 1UBQ_ready.psf 1UBQ_ready.pdb -t 12 -o 1UBQ_ready_wb
 package require autoionize
-autoionize -psf 1UBQ_ready.psf -pdb 1UBQ_ready.pdb -neutralize -o ionized
+autoionize -psf 1UBQ_ready_wb.psf -pdb 1UBQ_ready_wb.pdb -neutralize -o ionized
 exit
