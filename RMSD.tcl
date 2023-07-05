@@ -22,4 +22,8 @@ for {set frame 0} {$frame < $num_steps} {incr frame} {
 	}
 close $outfile
 }
-animate write pdb step1_eq_aligned.pdb beg 0 end -1 sel $protein waitfor all 
+animate write pdb step1_eq_aligned.pdb beg 0 end -1 sel $protein waitfor all
+
+ for {set i 1} {$i < 99} {incr i} { 
+         [atomselect top protein frame $i] writepdb step1_eq_aligned-$i.pdb 
+ } 
