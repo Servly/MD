@@ -3,7 +3,7 @@ set protein [atomselect top protein]
 $protein set segname A
 $protein writepdb segA.pdb
 package require psfgen
-topology par_all27_prot_lipid.inp
+topology par_all36m_prot.prm
 pdbalias residue HID HSD   
 pdbalias residue HIP HSP
 pdbalias residue HIS HSE
