@@ -22,7 +22,7 @@ guesscoord
 writepdb 1UBQ_ready.pdb
 writepsf 1UBQ_ready.psf
 package require solvate
-solvate 1UBQ_ready.psf 1UBQ_ready.pdb -t 12 -o 1UBQ_ready_wb
+solvate 1UBQ_ready.psf 1UBQ_ready.pdb -t 5 -o 1UBQ_ready_wb
 package require autoionize
 autoionize -psf 1UBQ_ready_wb.psf -pdb 1UBQ_ready_wb.pdb -neutralize -o ionized
 exit
