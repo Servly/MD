@@ -1,3 +1,5 @@
+mol new ionized.psf waitfor all
+mol addfile ubq_wb_eq.dcd waitfor all
 set outfile [open RMSD_eq.out w]
 # use frame 0 for the reference
 set reference [atomselect $mol "protein and name CA" frame 0]
