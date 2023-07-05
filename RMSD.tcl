@@ -5,7 +5,7 @@ set outfile [open RMSD_eq.out w]
 set reference [atomselect top "protein and name CA" frame 0]
 # the frame being compared
 set compare [atomselect top "protein and name CA"]
-
+set protein [atomselect top "protein"]
 set num_steps [molinfo top get numframes]
 for {set frame 0} {$frame < $num_steps} {incr frame} {
 	# get the correct frame
@@ -22,4 +22,4 @@ for {set frame 0} {$frame < $num_steps} {incr frame} {
 	}
 close $outfile
 }
-animate write pdb step1_eq_aligned.pdb beg 0 end -1 sel $compare waitfor all 
+animate write pdb step1_eq_aligned.pdb beg 0 end -1 sel $protein waitfor all 
