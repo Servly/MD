@@ -2,11 +2,11 @@ mol new ionized.psf waitfor all
 mol addfile ubq_wb_eq.dcd waitfor all
 set outfile [open RMSD_eq.out w]
 # use frame 0 for the reference
-set reference [atomselect $mol "protein and name CA" frame 0]
+set reference [atomselect top "protein and name CA" frame 0]
 # the frame being compared
-set compare [atomselect $mol "protein and name CA"]
+set compare [atomselect top "protein and name CA"]
 
-set num_steps [molinfo $mol get numframes]
+set num_steps [molinfo top get numframes]
 for {set frame 0} {$frame < $num_steps} {incr frame} {
 	# get the correct frame
 	$compare frame $frame
